@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.app.Notification;
 
-import static com.example.user.seviceproject2.Notification.CHANNEL_ID;
+import static com.example.user.seviceproject2.NotificationCreator.CHANNEL_ID;
+
 
 /**
  * Created by USER on 6/12/2020.
@@ -49,7 +49,6 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
 
         Intent notificationIntent=new Intent(this,MainActivity.class);
         PendingIntent pendingIntent=PendingIntent.getActivity(this,
@@ -109,7 +108,7 @@ public class MyService extends Service {
         startPretendLongRunningTask();
     }
 
-    public Boolean getIsPaused(){
+    public boolean getIsPaused(){
         return mIsPaused;
     }
 
@@ -123,7 +122,10 @@ public class MyService extends Service {
 
     public void resetTask(){
         mProgress = 0;
+        mIsPaused =true;
     }
+
+    public void setIsPaused(boolean b){mIsPaused=b;};
 
 
 }

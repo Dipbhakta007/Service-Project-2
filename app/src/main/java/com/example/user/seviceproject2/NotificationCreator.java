@@ -1,15 +1,18 @@
 package com.example.user.seviceproject2;
 
 import android.app.Application;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.os.Build;
+import android.support.v4.app.NotificationCompat;
 
 /**
  * Created by USER on 6/12/2020.
  */
 
-public class Notification extends Application {
+public class NotificationCreator extends Application {
     public static final String CHANNEL_ID= "Service Channel";
 
 

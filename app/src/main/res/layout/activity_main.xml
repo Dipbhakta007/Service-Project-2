@@ -13,7 +13,7 @@ tools:context=".MainActivity">
     android:layout_height="wrap_content"
         android:id="@+id/text_view"
     android:textSize="50sp"
-    android:layout_marginTop="84dp"
+    android:layout_marginTop="58dp"
     android:textColor="#000"
     android:text="00"
         android:layout_alignParentTop="true"
@@ -27,5 +27,29 @@ tools:context=".MainActivity">
     android:layout_centerHorizontal="true"
     android:layout_marginTop="20dp"
     android:text="start"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view2"
+        android:textSize="50sp"
+        android:layout_marginTop="51dp"
+        android:textColor="#000"
+        android:text="00"
+        android:layout_below="@+id/toggle_updates"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_updates2"
+        android:layout_below="@+id/text_view2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="start"/>
+
+
+
 
 </RelativeLayout>
